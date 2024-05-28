@@ -69,3 +69,42 @@ poetry run python manage.py migrate
 poetry run python manage.py runserver
 
 ```
+
+## O que é Serializers em Django Rest Framework?
+
+Como integrar Django Models e Django Serializers
+
+```shell
+poetry run python manage.py startapp order
+
+poetry run python manage.py startapp product
+```
+
+## Migrando Django Models
+
+- declarar os modelos de admin.py de cada aplicativo
+- dentro d o ``__init__.py``
+- declara os nossos app (product e order) dentro do bookstore project (settings.py)
+- deletar os models.py porque ja criamos um diretorio
+
+***comando para gerencia os modulos***
+
+```bash
+poetry run python manage.py makemigrations
+poetry run python manage.py migrate
+```
+
+Criando Serializers em Django
+instalar
+
+```bash
+poetry add django-rest-framework
+```
+
+Criando Serializers em Django
+
+### Resumo Exercício
+
+Nesse exercício vamos construir nossos serializers baseado nos nossos modelos, além disso vamos construir testes unitários para garantir a qualidade dos nosso código.
+
+Crie um PR e envie o link na plataforma da EBAC.
