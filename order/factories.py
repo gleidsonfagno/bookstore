@@ -6,10 +6,8 @@ from product.factories import ProductFactory
 from order.models import Order
 
 class UserFactory(factory.django.DjangoModelFactory):
-    email = factory.Facker("pystr")
-    username = factory.Facker("pystr")
-
-   
+    email = factory.Faker("pystr")
+    username = factory.Faker("pystr")
 
     class Meta:
         model = User
@@ -27,4 +25,4 @@ class OrderFactory(factory.django.DjangoModelFactory):
                 self.product.add(product)
     class Meta:
         model = Order
-        
+

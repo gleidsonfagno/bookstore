@@ -105,6 +105,21 @@ Criando Serializers em Django
 
 ### Resumo Exercício
 
+1 Para o teste app `product`
+
+```bash
+python manage.py test order.tests.test_serializers
+```
+
+2 Pra o testes do app `order`
+
+```bash
+python manage.py test order.tests.test_serializers
+```
+
 Nesse exercício vamos construir nossos serializers baseado nos nossos modelos, além disso vamos construir testes unitários para garantir a qualidade dos nosso código.
 
 Crie um PR e envie o link na plataforma da EBAC.
+
+
+git commit -m "✨ Adiciona serializers e 🧪 testes para os apps de order e product"
