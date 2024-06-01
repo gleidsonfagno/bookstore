@@ -121,5 +121,4 @@ Nesse exercício vamos construir nossos serializers baseado nos nossos modelos, 
 
 Crie um PR e envie o link na plataforma da EBAC.
 
-
-git commit -m "✨ Adiciona serializers e 🧪 testes para os apps de order e product"
+## ViewSets para alteração de dados
