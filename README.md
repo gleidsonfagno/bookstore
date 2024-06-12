@@ -121,5 +121,29 @@ Nesse exercício vamos construir nossos serializers baseado nos nossos modelos, 
 
 Crie um PR e envie o link na plataforma da EBAC.
 
+## ViewSets para alteração de dados
 
-git commit -m "✨ Adiciona serializers e 🧪 testes para os apps de order e product"
+### Rotas customizadas em Django Rest Framework
+
+## ViewSets Genericas em Django Rest Framework
+
+```bash
+poetry add django-extensions
+
+poetry run python manage.py show_urls
+
+```
+
+## Testando ViewSets com o pacote de teste do Django Rest Framework - Parte 1
+
+```bash
+# rodar os testes
+poetry run python manage.py test
+
+```
+
+Nesse exercício vamos construir nossos ViewSets baseado nos nossos
+serializers, além disso vamos construir testes unitários para garantir a
+qualidade dos nosso código.
+
+Crie um PR e envie o link na plataforma da EBAC.
