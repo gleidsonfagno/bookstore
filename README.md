@@ -125,12 +125,20 @@ Crie um PR e envie o link na plataforma da EBAC.
 
 ### Rotas customizadas em Django Rest Framework
 
-### ViewSets Genericas em Django Rest Framework
+## ViewSets Genericas em Django Rest Framework
 
 ```bash
 poetry add django-extensions
 
 poetry run python manage.py show_urls
+
+```
+
+## Testando ViewSets com o pacote de teste do Django Rest Framework - Parte 1
+
+```bash
+# rodar os testes
+poetry run python manage.py test
 
 ```
 
