@@ -142,8 +142,30 @@ poetry run python manage.py test
 
 ```
 
-Nesse exercício vamos construir nossos ViewSets baseado nos nossos
-serializers, além disso vamos construir testes unitários para garantir a
-qualidade dos nosso código.
+exxercicio
 
-Crie um PR e envie o link na plataforma da EBAC.
+## O Que é Paginação em DRF
+
+- rodar o projeto
+  
+```bash
+poetry run python manage.py runserver
+```
+
+## Adicionando dados para paginar
+
+```bash
+ poetry run python manage.py shell_plus
+
+from product.factories import ProductFactory
+for _ in range(50):
+    ProductFactory()
+
+```
+
+## Adicionando Django Toolbar para comparar a paginação do Django
+
+```bash
+poetry add django-debug-toolbar
+```
+## Configurando Paginação do Django Rest Framework
