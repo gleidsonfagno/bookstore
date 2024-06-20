@@ -168,4 +168,49 @@ for _ in range(50):
 ```bash
 poetry add django-debug-toolbar
 ```
+
 ## Configurando Paginação do Django Rest Framework
+
+## Token Authentication vs Authentication
+
+- crai um super ususario
+
+```bash
+poetry manage.py createsuperuser --user fagno --email fagno@gmail.com
+python manage.py createsuperuser --user fagno --email fagno@gmail.com
+senha : 123456
+```
+
+![Imagem da aula de token](auth_token.png)
+
+1 gerar a migracao do token autentication para verificar se a alguma dependencia de migracao
+
+```bash
+# executar esse comando 
+poetry run python manage.py drf_create_token fagno
+# ele gera um token desse usuario
+Generated token 15dda6bccf746a7d60fe62817db6aff21a19b748 for user fagno
+```
+
+![Imagem da aula de token](validando_token.png)
+
+na imagem esta marcado cada alterecao
+
+![Imagem da aula de token](Sem_Token.png)
+
+semo o token
+
+### Testes de segurança em Django Rest Framework
+
+```bash
+poetry run python manage.py test
+```
+
+Nesse exercício vamos adicionar a autenticação via Token do Django Rest
+Framework apenas na nossa ViewSet de Order.
+
+![Imagem exercicio_token_order](exercicio_token_order.png)
+com o tokern
+![Imagem exercicio_token_order](execicio_token_order_com_token.png)
+
+Crie um PR e envie o link na plataforma da EBAC.
