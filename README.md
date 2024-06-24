@@ -181,7 +181,7 @@ python manage.py createsuperuser --user fagno --email fagno@gmail.com
 senha : 123456
 ```
 
-![Imagem da aula de token](auth_token.png)
+![Imagem da aula de token](./img/auth_token.png)
 
 1 gerar a migracao do token autentication para verificar se a alguma dependencia de migracao
 
@@ -192,11 +192,11 @@ poetry run python manage.py drf_create_token fagno
 Generated token 15dda6bccf746a7d60fe62817db6aff21a19b748 for user fagno
 ```
 
-![Imagem da aula de token](validando_token.png)
+![Imagem da aula de token](./img/validando_token.png)
 
 na imagem esta marcado cada alterecao
 
-![Imagem da aula de token](Sem_Token.png)
+![Imagem da aula de token](./img/Sem_Token.png)
 
 semo o token
 
@@ -209,8 +209,31 @@ poetry run python manage.py test
 Nesse exercício vamos adicionar a autenticação via Token do Django Rest
 Framework apenas na nossa ViewSet de Order.
 
-![Imagem exercicio_token_order](exercicio_token_order.png)
+![Imagem exercicio_token_order](./img/exercicio_token_order.png)
 com o tokern
-![Imagem exercicio_token_order](execicio_token_order_com_token.png)
+![Imagem exercicio_token_order](./img/execicio_token_order_com_token.png)
 
 Crie um PR e envie o link na plataforma da EBAC.
+
+git commit -m ":white_check_mark: exercico autenticação via Token"
+
+## Rodando nosso projeto utilizando Dockerfile
+
+```bash
+#  contrua nossa imagem no diretorio atual
+docker build -t bookstore:latest .
+
+# ver as imagens
+docker images 
+
+# executar a imagem sem entrar na imagem
+docker run --name bookstore -d -p 8000:8000 bookstore:latest
+# esse e orach da imagem 63e2901e54b8435a55f3a4b30d3dc38c2fb1d5e06b8659aa5ff1a4adbaad691c
+
+ver se a imagem esta rodando
+```
+
+Nesse exercício vamos criar um Dockerfile dentro do nosso projeto do
+Django Rest Framework e rodar nosso projeto dentro do Docker, crie uma
+branch e um novo PR e após isso envie o link do PR para a plataforma da
+EBAC
