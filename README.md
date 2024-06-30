@@ -233,6 +233,54 @@ docker run --name bookstore -d -p 8000:8000 bookstore:latest
 ver se a imagem esta rodando
 ```
 
+## Comandos em Docker Compose
+
+```bash
+docker run -dit --name alpine1 --network alpine-net alpine ssh
+docker network create --driver none ebac-docker-empty
+
+docker run -dit --name alpine3 --network none alpine ssh
+bb286aa9ea6a54731801e0f281dce2760cec7c3da0f6a14593dc82269431da5b
+
+docker ps 
+lista 
+
+assesar o alpine 
+docker container attach alpine3
+
+# Inicie o Contêiner:
+# Primeiro, inicie o contêiner que você deseja anexar:
+docker start alpine3
+
+# Anexe-se ao Contêiner:
+# Após iniciar o contêiner, você pode anexar-se a ele:
+docker attach alpine3
+
+docker commit alpine3 minha_nova_imagem_alpine
+docker run -it minha_nova_imagem_alpine /bin/sh
+
+docker networck inspect
+docker networck ls
+docker network inspect <none>
+
+```
+
+## Criando seu primeiro Docker Compose
+
+```bash
+docker-compose up --build
+```
+
+## Como analizar logs e como o Docker Compose funciona internamente
+
+```bash
+docker exec -it "o ID 1148bf68e82c   bookstore-web" /bin/bash
+# vai para dentro do container 
+```
+
+- O Makefile seve com configuracao de setup para instalacao de poacotes e trabalha junto com o readme
+- make install
+
 Nesse exercício vamos criar um Dockerfile dentro do nosso projeto do
 Django Rest Framework e rodar nosso projeto dentro do Docker, crie uma
 branch e um novo PR e após isso envie o link do PR para a plataforma da
