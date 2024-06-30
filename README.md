@@ -285,3 +285,6 @@ Nesse exercício vamos criar um Dockerfile dentro do nosso projeto do
 Django Rest Framework e rodar nosso projeto dentro do Docker, crie uma
 branch e um novo PR e após isso envie o link do PR para a plataforma da
 EBAC
+
+docker-compose exec web python manage.py migrate --noinput
+git commit -m ":sparkles: feat: adicionando configuracao de  Docker Compose"
