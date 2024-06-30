@@ -13,8 +13,8 @@ django-rest-framework = "^0.1.0"
 django-extensions = "^3.2.3"
 django-debug-toolbar = "^4.4.2"
 psycopg2-binary = "2.9.9"    
-flake8 = "^7.1.0"
-black = "^24.4.2"
+flake8 = "^6.1.0"
+black = "^23.12.1"
 
 [tool.poetry.group.dev.dependencies]
 factory-boy = "^3.3.0"
