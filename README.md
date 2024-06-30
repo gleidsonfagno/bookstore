@@ -269,11 +269,19 @@ docker network inspect <none>
 
 ```bash
 docker-compose up --build
-
 ```
+
+## Como analizar logs e como o Docker Compose funciona internamente
+
+```bash
+docker exec -it "o ID 1148bf68e82c   bookstore-web" /bin/bash
+# vai para dentro do container 
+```
+
+- O Makefile seve com configuracao de setup para instalacao de poacotes e trabalha junto com o readme
+- make install
 
 Nesse exercício vamos criar um Dockerfile dentro do nosso projeto do
 Django Rest Framework e rodar nosso projeto dentro do Docker, crie uma
 branch e um novo PR e após isso envie o link do PR para a plataforma da
 EBAC
- 
