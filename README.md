@@ -269,6 +269,8 @@ docker network inspect <none>
 
 ```bash
 docker-compose up --build
+poetry install
+poetry lock
 ```
 
 ## Como analizar logs e como o Docker Compose funciona internamente
