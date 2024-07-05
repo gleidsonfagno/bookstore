@@ -186,6 +186,8 @@ senha : 123456
 1 gerar a migracao do token autentication para verificar se a alguma dependencia de migracao
 
 ```bash
+from django.contrib.auth.models import User
+User.objects.filter(is_superuser=True)
 # executar esse comando 
 poetry run python manage.py drf_create_token fagno
 # ele gera um token desse usuario
@@ -303,3 +305,5 @@ docker network ls
 docker network inspect minha-rede
 
 ```
+
+## Configurando GitHub Actions
