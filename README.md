@@ -288,5 +288,18 @@ Django Rest Framework e rodar nosso projeto dentro do Docker, crie uma
 branch e um novo PR e após isso envie o link do PR para a plataforma da
 EBAC
 
+```bash
 docker-compose exec web python manage.py migrate --noinput
-git commit -m ":sparkles: feat: adicionando configuracao de  Docker Compose"
+```
+
+<!-- git commit -m ":sparkles: feat: Definindo redes com o Docker Compose" -->
+
+## Definindo redes com o Docker Compose
+
+```bash
+# listar
+docker network ls
+# Para obter informações detalhadas sobre uma rede específica, use o comando:
+docker network inspect minha-rede
+
+```
