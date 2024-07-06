@@ -6,7 +6,7 @@ on:
 jobs:
   qa:
     name: Quality check
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.8
+          python-version: ^3.12
 
       - name: Install dependencies
         run: |
@@ -27,7 +27,7 @@ jobs:
         run: poetry run python manage.py test
 
       - name: Run Wemake Python Styleguide
-        uses: wemake-services/wemake-python-styleguide@v0.16.0
+        uses: wemake-services/wemake-python-styleguide@v0.15.0
         with:
           reporter: 'github-pr-review'
         env:
