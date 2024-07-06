@@ -27,7 +27,7 @@ jobs:
         run: poetry run python manage.py test
 
       - name: Run Wemake Python Styleguide
-        uses: wemake-services/wemake-python-styleguide@v0.16.0
+        uses: wemake-services/wemake-python-styleguide@0.15.3
         with:
           reporter: 'github-pr-review'
         env:
