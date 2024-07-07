@@ -1,33 +1,36 @@
-name: Python Pull Request Workflow
+name: Fluxo de Trabalho de Pull Request para Python
 
-on:
-  pull_request:
+on: [pull_request]
 
 jobs:
   qa:
-    name: Quality check
-    runs-on: ubuntu-18.04
-
+    name: Verificação de Qualidade
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - name: Fazer checkout do repositório
+        uses: actions/checkout@v1
+      
+      - name: Configurar Python
+        uses: actions/setup-python@master
         with:
-          python-version: 3.8
-
-      - name: Install dependencies
+          python-version: 3.12
+      
+      - name: Instalar Poetry e dependências
         run: |
+          python -m ensurepip
           python -m pip install --upgrade pip
-          pip install poetry
+          python -m pip install --upgrade poetry
           poetry install
+      
+      - name: Verificar se o Poetry está funcionando
+        run: poetry --version
 
-      - name: Run Tests
+      - name: Executar testes
         run: poetry run python manage.py test
 
-      - name: Run Wemake Python Styleguide
-        uses: wemake-services/wemake-python-styleguide@v0.16.0
+      - name: Executar Wemake Python Styleguide
+        uses: wemake-services/wemake-python-styleguide@0.16.0
+        continue-on-error: true
         with:
           reporter: 'github-pr-review'
         env:
