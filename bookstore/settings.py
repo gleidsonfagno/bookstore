@@ -29,7 +29,7 @@ SECRET_KEY = (
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'bookstore-production-5cca.up.railway.app']
 
 
 # Application definition
@@ -165,7 +165,5 @@ INTERNAL_IPS = [
 # For example: 'DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]'
 # ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split("")
 
-# ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'bookstore-production-5cca.up.railway.app']
-
+# ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'bookstore-production-5cca.up.railway.app']
 
