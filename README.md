@@ -307,3 +307,5 @@ docker network inspect minha-rede
 ```
 
 ## Configurando GitHub Actions
+
+git commit -m ":rocket: teste para deplay da aplicaocao na Railway"
