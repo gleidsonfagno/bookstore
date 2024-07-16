@@ -166,3 +166,6 @@ INTERNAL_IPS = [
 
 # ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'bookstore-production-5cca.up.railway.app']
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
