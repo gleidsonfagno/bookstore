@@ -308,4 +308,4 @@ docker network inspect minha-rede
 
 ## Configurando GitHub Actions
 
-S"
+<!-- git commit -m ":rocket: atualizando o ALLOWED_HOST" -->
